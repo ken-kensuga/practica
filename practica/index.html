@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <button type="button" onclick="cambiarColor()">¡Dame un color!</button>
+
+    <h1> oprime para cambiar el color </h1>
+
+    <script>
+        function cambiarColor() {
+            fetch('http://localhost:3000')
+                .then(respuesta => respuesta.text())
+                .then(colorQueRecibiste => {
+                    // 1. Cambiamos el fondo
+                    document.body.style.backgroundColor = colorQueRecibiste;
+                    
+                    // 2. ¡Extra! Cambiamos el texto del H1 para mostrar el nombre del color
+                    document.getElementById('textoColor').innerText = "El color es: " + colorQueRecibiste;
+                    
+                    console.log("El color recibido fue: " + colorQueRecibiste);
+                })
+                .catch(error => {
+                    console.error("¡Ups! El servidor no responde:", error);
+                    document.getElementById('textoColor').innerText = "Error: El servidor está apagado";
+                });
+        }
+    </script>
+</body>
+</html>
