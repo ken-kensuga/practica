@@ -8,3 +8,5 @@ console.log("memoria total del sistema operativo", os.totalmem()/1024/1024/1024,
 console.log("memoria libre del sistema operativo", os.freemem()/1024/1024/1024, "GB");
 console.log("numero de nucleos del sistema operativo", os.cpus().length);
 console.log("informacion de cada nucleo del sistema operativo", os.cpus()); 
+console.log("informacion de cada nucleo del sistema operativo", os.cpus()[0]);
+console.log("informacion de cada nucleo del sistema operativo", os.cpus()[0].model);
