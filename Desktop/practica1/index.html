@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- dentro de head van los metadatos, el título, 
+     los enlaces a hojas de estilo, etc -->
+<head>
+
+    <!-- esto de acá abajo es el charset, que es la 
+    codificación de caracteres que se va a usar en el sitio,
+    es importante para que los navegadores puedan interpretar 
+    correctamente el contenido del sitio, y para evitar problemas con
+    caracteres especiales, acentos, etc -->
+    <meta charset="UTF-8">
+
+    <!-- esto de acá abajo es el viewport, que es la configuración de la ventana del navegador,
+    es importante para que el sitio se vea bien en dispositivos móviles,
+    y para que el diseño sea responsive, es decir, que se adapte al 
+    tamaño de la pantalla del dispositivo, y para evitar problemas con el zoom, etc -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- esto de aca abajo es la descripción del sitio, es importante para el SEO y 
+    para que los motores de búsqueda entiendan de qué trata tu sitio-->
+
+    <meta name="description" content="este es el sitio de kensuga, un sitio de ejemplo para aprender html">   
+
+
+<!-- esto de acá abajo es el título del sitio, 
+que es lo que aparece en la pestaña del navegador,
+y es importante para el SEO y para que los usuarios 
+puedan identificar tu sitio fácilmente -->
+<title>este es el nombre del sitio</title>
+
+<!-- esto de acá abajo son las palabras clave del sitio,
+ que son importantes para el SEO y para que los motores de búsqueda entiendan 
+ de qué trata tu sitio, y para que los usuarios puedan encontrar tu sitio fácilmente
+cuando busquen esos términos en los motores de búsqueda   -->
+<meta name="keywords" content="html, css, javascript, sitio de ejemplo, kensuga">
+
+<!-- aca el auto de tu obra -->
+<meta name="author" content="kensuga">
+
+!-- esto de acá abajo es el color de tema para el navegador, opcional, pero puede mejorar la apariencia del sitio en algunos navegadores y dispositivos -->
+ <meta name="theme-color" content="#4a90e2">
+
+ <meta name="robots" content="index, follow">    <!-- Si estás haciendo una web de prueba y NO quieres que salga en Google todavía, usas esto. Si quieres que salga, se pone index, follow, opcional -->
+
+<!-- esto de acá abajo es el título del sitio para las redes sociales, -->
+<meta property="og:title" content="este es el título del sitio">
+
+<!-- Descripción: El texto que sale debajo del título en Google -->
+<meta property="og:description" content="este es el sitio de kensuga, un sitio de ejemplo para aprender html">
+
+<!-- esto de acá abajo es la imagen del sitio para las redes sociales, -->
+<meta property="og:image" content="https://www.ejemplo.com/imagen.jpg">
+
+<!-- esto de acá abajo es la URL del sitio para las redes sociales,
+<meta property="og:url" content="https://www.usuariodegithub.com/kensuga">
+
+ <!-- este es el icono pequeño al lado de la pestaña del navegador -->
+<link rel="icon" href="icono.png" type="image/png ">
+
+<!-- Enlaces a estilos -->
+<link rel="stylesheet" href="estilos.css">
+
+<!-- esto de acá abajo es el enlace canónico, que es importante para el SEO y para evitar problemas de contenido duplicado, ya que le indica a los motores de búsqueda cuál es la URL principal del sitio, y ayuda a consolidar la autoridad del sitio en esa URL -->
+<link rel="canonical" href="https://tusitio.com/index.html">
+
+<!-- esto de acá abajo es para cargar una fuente personalizada desde Google Fonts, -->
+<link rel ="preconnect" href="https://fonts.googleapis.com">
+
+</head>
+
+<!-- dentro de body va el contenido visible del sitio, como texto, imágenes, videos, etc -->
+
+<body>
+
+    <header>
+        <h1>Bienvenidos a mi sitio de ejemplo</h1>
+        <nav>  <!-- esto es para crear un menú de navegación -->
+            <ul> <!-- esto es para crear una lista de elementos, en este caso, los enlaces del menú de navegación -->
+                <li><a href="#">Inicio</a></li> <!-- esto es para crear un elemento de la lista, en este caso, un enlace al inicio del sitio, el href="#" es un enlace vacío, que no lleva a ninguna parte, pero se puede cambiar por la URL del sitio o de la sección correspondiente -->
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+        
+     </header>
+
+     <main>
+        
+            <!-- esto es para el contenido principal del sitio -->
+            <!-- dentro va el contenido fuerte, como si hiciste una calculadora o lo que sea   -->
+            <h1>Título Principal</h1>
+            <h2>Subtítulo de sección</h2>
+
+            <section>
+
+                <!-- esto sirve para dividir ese contenido único en pedazos o "temas", por ejemplo, si tu sitio tiene una sección de proyectos, otra sección de blog, otra sección de contacto, etc, puedes usar secciones para organizar ese contenido de manera más clara y estructurada -->
+                <p>Este es un párrafo de ejemplo para mostrar cómo se ve el texto en el sitio. Puedes escribir lo que quieras aquí, como información sobre tu sitio, tus proyectos, tus intereses, etc.</p>
+                <h3>Subtítulo de sección 2</h3>
+                <p>Este es un párrafo de ejemplo para mostrar cómo se ve el texto en el sitio. Puedes escribir lo que quieras aquí, como información sobre tu sitio, tus proyectos, tus intereses, etc.</p>
+            
+                <!-- Sirve para decirle al navegador (y a Google): "Todo lo que está aquí adentro tiene que ver con el mismo tema".
+                Regla de oro: Cada <section> debería tener casi siempre un título (<h2>, <h3>, etc.) adentro para que se sepa de qué trata esa sección. -->
+
+                    <section id="mi ejemplo"> <!-- el id es un identificador único para esa sección, que se puede usar para enlazar a esa sección desde otras partes del sitio o desde otros sitios, por ejemplo, si quieres que alguien pueda ir directamente a esa sección desde un enlace, puedes usar el id para eso -->
+            <!-- Aquí va todo lo relacionado con el "Ejemplo" -->
+            <h2>Mi ejemplo</h2>
+            <!-- código de mi ejemplo -->
+
+            <--!Cuando escribes <section id="calculadora">, ese id es como el DNI o nombre único de esa caja. Sirve para 3 cosas:
+            Para JavaScript (Lo más importante): Para decirle a la IA o a tu código: "Busca la sección que se llama 'calculadora' y cámbiale el color". 
+
+            Para el CSS: Para darle estilos específicos solo a esa sección (#calculadora { background: red; }).
+            
+            Para Enlaces (Anclas): Si creas un botón que diga "Ir a la calculadora", puedes hacer que al pulsar el enlace la página baje sola hasta esa sección:
+            <a href="#mi-ejemplo">Ir a mi ejemplo</a>
+
+            </section>
+
+     </main>
+
+     <footer> 
+        <!-- esto es para el pie de página del sitio, donde se suele poner información de contacto, derechos de autor, etc -->
+        <p>&copy; 2024 Kensuga. Todos los derechos reservados.</p>
+    </footer>
+
+        
+</body>
+</html>
